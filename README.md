@@ -10,7 +10,7 @@ http://127.0.0.1:8000/docs/
 
 ### Features
 2 models - Category and Task which are related by One to Many relationship.
-Serializers for both models and for registration.
+There are serializers for both models and for registration.
 
 Available endpoints also include 'refresh-login/' for refreshing auth token, 'login/' for obtaining auth token by entering username and password, and 'register/' - for registration.
 
