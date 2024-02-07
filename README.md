@@ -27,6 +27,19 @@ To deploy this project you need to clone this repository and put .env file with 
   docker-compose up -d
 ```
 
+## Access
+For comfortable access to the admin panel, you can use the following credentials:
+
+username: vention
+
+password: vention2024
+
+Or instead of using this credentials you can create your own custom superuser by running the following command in terminal inside of container:
+
+```bash
+  python manage.py createsuperuser
+```
+
 
 ## Screenshots
 
