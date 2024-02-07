@@ -18,6 +18,9 @@ For endpoint 'category' and 'task' pagination is included.
 
 Admin page is also configured to have the best view on the data.
 
+### Testing
+Unit tests are included and will be run before the server is started automatically.
+For each endpoint there are tests for both valid and invalid scenarios. Pytest is used for testing.
 
 ## Deployment
 
@@ -51,3 +54,6 @@ Admin panel overview
 
 Quick view at available endpoints
 [![Screenshot-2024-02-06-at-22-06-42.png](https://i.postimg.cc/Df9CmWv8/Screenshot-2024-02-06-at-22-06-42.png)](https://postimg.cc/yWThb8SH)
+
+Unit tests are running before the server is started
+[![Screenshot-2024-02-08-at-00-12-38.png](https://i.postimg.cc/J0t6HMWr/Screenshot-2024-02-08-at-00-12-38.png)](https://postimg.cc/m1fN0xDJ)
