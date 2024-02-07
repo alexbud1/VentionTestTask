@@ -23,3 +23,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . /app/
 
 RUN python3 manage.py collectstatic --no-input
+
+# Give execute permissions to the init.sh file
+RUN chmod +x init.sh
