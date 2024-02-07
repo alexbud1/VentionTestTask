@@ -5,13 +5,12 @@ import dotenv
 
 dotenv.load_dotenv('.env')
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -40,8 +39,6 @@ MIDDLEWARE = [
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
-        'rest_framework.authentication.SessionAuthentication',
-        'rest_framework.authentication.BasicAuthentication',
     ),
 }
 
@@ -96,6 +93,9 @@ USE_I18N = True
 USE_TZ = True
 
 STATIC_URL = 'static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 

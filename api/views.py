@@ -1,4 +1,4 @@
-from rest_framework import viewsets, permissions, status, views, mixins, generics
+from rest_framework import viewsets, permissions, generics
 from rest_framework.response import Response
 from drf_yasg.utils import swagger_auto_schema
 from rest_framework.pagination import PageNumberPagination
@@ -29,7 +29,7 @@ class CategoryViewSet(viewsets.ModelViewSet):
     pagination_class = ApiFilterSetPagination
 
     def get_permissions(self):
-        if self.action in ['list', 'retrieve']:
+        if self.action in ['list', 'retrieve']:  # Allow any to list and retrieve due to requirements in tech task
             return [permissions.AllowAny()]
         return super().get_permissions()
 
@@ -88,7 +88,7 @@ class TaskViewSet(viewsets.ModelViewSet):
     pagination_class = ApiFilterSetPagination
 
     def get_permissions(self):
-        if self.action in ['list', 'retrieve']:
+        if self.action in ['list', 'retrieve']:  # Allow any to list and retrieve due to requirements in tech task
             return [permissions.AllowAny()]
         return super().get_permissions()
 
